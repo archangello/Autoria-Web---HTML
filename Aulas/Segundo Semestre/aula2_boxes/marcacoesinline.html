@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marcacoes - inline</title>
+    <style>
+        a{
+            background-color: aqua;
+            width: 5rem;
+            padding: 4rem;
+            /* 
+            como o ancora é uma marcação inline, a largura "nao se aplica"
+            e o padding funciona com um "erro", fazendo que o 'a' fique sobreposto
+            em relacao aos outros elementos
+            */
+            display: block;
+            /* o display : block deixara os 'a's um debaixo do outro */
+            display: inline-block;
+            /* o display : inline deixa uma do lado da outra, mas permitira o width e o padding */
+            border: 1px solid black;
+            /* border : espessura estilo cor
+            espessura é um numero com unidade
+            estilo : solid, double, dashed, dotted, inset, outset ...
+            cor : #ff0000, rgb, rgba ...
+            */
+            margin: o;
+            /* 
+            margin e padding :
+            4 valores : top, right, bottom, left - margin : 1px, 1px, 1px, 1px
+            3 valores : top, right/left, bottom  - margin : 1px, 1px, 1px
+            2 valores : top/bottom, right/left   - margin : 1px, 1px
+            1 valor   : top/bottom/left/right    - margin : 1px
+            */
+            height: 10rem;
+            /* 
+            atributo que modifica a altura para a marcacao
+            assim como width, existe max e min-height
+            */
+        }
+        div{
+            background-color: aquamarine;
+            width: 70rem;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- o ideal é colocar uma lista sem valor  -->
+    <a href="">texto<p>nao faz sentido nesse caso colocar 'p' em um 'a' </p></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, odit magnam, hic molestiae natus sapiente molestias culpa provident, omnis quisquam aliquid atque veritatis corporis. Modi sunt est veritatis at nemo?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, odit magnam, hic molestiae natus sapiente molestias culpa provident, omnis quisquam aliquid atque veritatis corporis. Modi sunt est veritatis at nemo?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, odit magnam, hic molestiae natus sapiente molestias culpa provident, omnis quisquam aliquid atque veritatis corporis. Modi sunt est veritatis at nemo?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, odit magnam, hic molestiae natus sapiente molestias culpa provident, omnis quisquam aliquid atque veritatis corporis. Modi sunt est veritatis at nemo?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, odit magnam, hic molestiae natus sapiente molestias culpa provident, omnis quisquam aliquid atque veritatis corporis. Modi sunt est veritatis at nemo?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, odit magnam, hic molestiae natus sapiente molestias culpa provident, omnis quisquam aliquid atque veritatis corporis. Modi sunt est veritatis at nemo?</p>
+</body>
+</html>

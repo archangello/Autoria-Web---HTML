@@ -1,0 +1,18 @@
+TIPOS DE MARCACAO 
+---
+INLINE       : sao marcacoes cujo espaco ocupa somente seu conteudo, ou seja, varias marcacoes inlines aparecem em uma linha so.
+BLOCK        : sao marcacoes cujo espaco ocupa a linha inteira, e nao so seu conteudo. O display : block deixara os 'a's um debaixo do outro.
+INLINE-BLOCK : o display : inline deixa uma do lado da outra, mas permitira o width e o padding.
+---
+
+BORDER : espessura estilo cor
+- espessura é um numero com unidade
+- estilo : solid, double, dashed, dotted, inset, outset ...
+- cor : #ff0000, rgb, rgba ...
+
+---
+MARGIN E PADDING :
+- 4 valores : top, right, bottom, left - margin : 1px, 1px, 1px, 1px
+- 3 valores : top, right/left, bottom  - margin : 1px, 1px, 1px
+- 2 valores : top/bottom, right/left   - margin : 1px, 1px
+- 1 valor   : top/bottom/left/right    - margin : 1px
