@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border : 2px solid black;
+            margin : 2rem auto;
+            padding: 2rem;
+            width  : 20rem;
+        }
+        label[for]{
+            /* 
+            o label[for] ira formatar somente os labels com for definido
+            ou seja, as labels com input 'radio' nao serao formatados, pois nao precisam
+            */
+            background-color: aqua;
+            display         : inline-block;
+            width           : 7rem;
+            vertical-align: top;
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <a href="index.html"><h1>FORMULÁRIOS</h1></a>
+
+    <h2>CONTATO</h2>
+    <form action="">
+        <label for="nome"> Nome : </label>
+        <input type="text" id="nome" placeholder="Digite seu nome"> <br>
+
+        <!-- 
+
+        - placeholder : coloca um texto temporario dentro do espaco do input
+        - disabled    : é um atributo que desativa a tag em que esta inserido
+        - required    : é um atributo que torna um input obrigatorio
+        - value       : é um atributo importante para a funcao de edicao de dados,
+        como por exemplo quando vamos atualizar uma senha de cadastro
+
+        - textarea    : é uma tag que recebe um texto longo
+
+        -->
+
+        <label for="email"> E-Mail : </label>
+        <input type="text" id="email"><br>
+
+        <label for="mensagem"> Mensagem : </label>
+        <textarea id="mensagem" draggable="false"> o 'value' do textarea e dentro da marcacao!</textarea><br>
+
+        <input type="submit" value="ENVIAR">
+    </form>
+    <h2>BUSCA</h2>
+
+    <form action="">
+        <label for="busca">Busca : </label>
+        <input type="search" id="busca">
+
+        <label for=""></label>
+        <input type="submit" id="">
+    </form>
+
+    <h2>ENQUETE</h2>
+    <form action="">
+        <p>Qual sua disciplina favorita?</p>
+        <label><input name="disciplina" type="radio" value="autoria"  >Autoria</label>    <br>
+        <label><input name="disciplina" type="radio" value="minora"   >Programação</label><br>
+        <label><input name="disciplina" type="radio" value="design"   >Design</label>     <br>
+        <label><input name="disciplina" type="radio" value="matem"    >Matemática</label> <br>
+        <label><input name="disciplina" type="radio" value="portugues">Portugues</label>  <br>
+
+        <!-- 
+        o input do tipo 'radio' so permite selecionar um item, enquanto o input 'check' pode selecionar mais que um
+
+        o atributo de name é obrigatorio e precisa ser igual em todos os inputs (para deixar essa selecao)
+        o atributo da value tambem é obrigatorio
+        -->
+        <input type="submit" value="ENVIAR">
+    </form>
+
+</body>
+
+</html>

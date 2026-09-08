@@ -1,0 +1,5 @@
+NOVOS ATRIBUTOS  DENTRO DO <input>:
+
+- placeholder : coloca um texto temporario dentro do espaco do input
+- disabled    : é um atributo que desativa a tag em que esta inserido
+- required    : atributo que torna um input obrigatorio
