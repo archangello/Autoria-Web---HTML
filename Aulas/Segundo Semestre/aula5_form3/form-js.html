@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+        N1: <input type="number" id="n1">
+    </label>
+    <label>
+        N2: <input type="number" id="n2">
+    </label>
+    <button id="dobro">DOBRO</button>
+    <p id="resultado"></p>
+    <script>
+        // o js fica depois do html, visto que todos os id's que o js precisa fora criados no html
+        // alert("ALO MUNDO"); // janela de alerta - nao usar pois fica chata
+
+        document.write("OLA MUNDO COM WRITE"); // nao usar pois e antiga
+        console.log("OLA MUNDO NO CONSOLE");
+
+        // muito indicado - forma profissional de depuracao do codigo
+        // so aparece dentro do console de depuracao do proprio site (inspecionar)
+
+        document.getElementById("resultado").innerHTML = "OLA MUNDO COM innerHTML";
+
+        // tambem muito indicado! innerHTML coloca o texto dentro da tag
+
+        const botao = document.getElementById("dobro");
+        // pegando a marcacao que o id indica, nesse caso, o button
+
+        botao.addEventListener("click", function(e){
+            // addEventListener - essa parte do codigo vai detectar se algo acontecer
+            // click - o evento e o click
+            alert("Clickou no botão.");
+            const n1 = document.getElementById("n1").value;
+            const n2 = document.getElementById("n2").value;
+            // document.getElementById("resultado").innerHTML = "O resultado é : " + n1 * n2;
+            document.getElementById("resultado").innerHTML = `O resultado é : (${n1*n2}) `;
+            }
+        );
+
+    </script>
+</body>
+</html>

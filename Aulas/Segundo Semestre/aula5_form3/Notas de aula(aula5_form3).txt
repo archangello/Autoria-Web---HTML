@@ -1,0 +1,15 @@
+NOVOS ATRIBUTOS :
+
+atributo list="" :  
+- permite que o usuario selecione uma opcao ou digite essa opcao
+- o usuario tambem pode pesquisar por itens na lista de opcoes
+- mais 
+
+atributo type="" :
+- indica o tipo de um input
+- pode ter varios valores, os principais sendo:
+    - text     = texto
+    - number   = numero
+    - file     = arquivo. o tipo especifico de arquivo pode ser especificado no js
+    - checkbox = caixa marcavel, a qual, se escrita em conjunto com varios outros de mesmo nome, pode ser marcado junto a outros
+    - radio    = caixa marcavel, nao pode ser marcada mais de uma de mesmo nome

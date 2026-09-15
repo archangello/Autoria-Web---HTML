@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="cidade"></label>
+            <input type="text" id="cidade" list="listacidade">
+            <!-- 
+            componente list="" :  
+            - permite que o usuario selecione uma opcao ou digite essa opcao
+            - o usuario tambem pode pesquisar por itens na lista de opcoes
+            - mais versatil que o
+            -->
+            <datalist id="listacidade">
+                <option value="Natal"></option>
+                <option value="Fortaleza"></option>
+                <option value="Recife"></option>
+                <option value="João Pessoa"></option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Área de interesse</legend>
+            <label>
+                <input type="checkbox" name="interesse" id="desenvolvimento" value="desenvolvimento">
+                Desenvolvimento
+            </label><br>
+            <label>
+                <input type="checkbox" name="interesse" id="design" value="design">
+                Design
+            </label><br>
+            <label for="data">Data de conclusão de curso :</label><br>
+            
+            <data value="">
+                <input type="date" id="data">
+            </data><br>
+
+            <label for="curriculo"></label>
+            <input type="file" id="curriculo">
+            <!-- 
+            o valor de atributo type="" file pode ser usado para enviar um arquivo
+            - a restricao de que tipo de arquivo pode ser enviado e feito no JavaScript
+            -->
+
+            
+        </fieldset>
+        <!-- 
+        o fieldset e um componente para organizar os campos do formulario
+        - e totalmente opcional
+        - ele faz uma caixa ao redor de seus componentes
+        -->
+        <input type="submit" value="ENVIAR">
+    </form>
+    <form action="">
+
+    </form>
+</body>
+</html>
