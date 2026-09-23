@@ -3,20 +3,21 @@ body{
     font-family: consolas;
 }
 a{
-    display: block;
     padding: 2rem;
+    display: block;
 }
 /* ------------------- */
 /* formatacao - header */
 header{
     background-image: linear-gradient(to right, #A12FFD, #1DB5FD);
     padding: 2rem;
+
     display: flex;
     justify-content: space-between;
 }
 header h2{
-    display: inline;
     color: white;
+    display: inline;
 }
 header h1{color: white;}
 header ul{
@@ -25,8 +26,8 @@ header ul{
     justify-content: flex-end;
 }
 header ul li{
-    margin: 1rem;
     background-color: rgb(76, 177, 211);
+    margin: 1rem;
 }
 /* ----------------- */
 /* formatacao - main */
@@ -34,21 +35,49 @@ main{
     background-color: black;
     color: white;
 
-    padding: 1rem;
+    padding: 3rem;
 
     display: flex;
     justify-content: center;
 }
-.formulario_calendario{
+main section{
     background-color: #0e455f;
-    display: flex;
-    flex-wrap: wrap;
+
+    padding: 1rem;
+    margin:  1rem;
+    border-radius: 1rem;
 }
-.formulario_calendario div{
-    background-color: blue;
-}
+/* formatacao - caixas com modalidades (id="esportes") */
+    #esportes{
+        width:  36rem;
+        height: 36rem;
+
+        display:   flex;
+        flex-wrap: wrap;
+    }
+    #esportes div{
+        background-color: rgb(65, 65, 145);
+        width: 10rem;
+        margin: 1rem;
+        
+        text-align:    center;
+        align-content: center;
+    }
+/* formatacao - form e table com calendario(id="formulario_calendario") */
+    #formulario_calendario table{
+        background-color: black;
+        padding: 1rem;
+    }
+    #formulario_calendario td:nth-child(1){color: red;}
+    #formulario_calendario th:nth-child(1){color: red;}
+    #formulario_calendario input{
+        background-color: #145a7b;
+    }
 /* ------------------- */
 /* formatacao - footer */
 footer{
     background-image: linear-gradient(to right, #A12FFD, #1DB5FD);
+    padding: 2rem;
+
+    text-align: center;
 }
