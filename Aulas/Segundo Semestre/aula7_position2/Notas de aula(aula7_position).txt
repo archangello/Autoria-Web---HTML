@@ -1,0 +1,6 @@
+POSITION :
+
+- define a posicao da tag em relacao a diferentes partes da pagina
+position : absolute vai junto com a barra de rolagem
+position : fixed fixa a tag numa parte da tela 
+e como se o fixed colocasse no oculos em que estamos vndo o site, enquanto o absolute coloca a tag no site em si 

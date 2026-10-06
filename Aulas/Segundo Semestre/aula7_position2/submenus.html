@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body > ol{
+            /* seleciona o ol imediatamente dentro do body*/
+            /* nao seleciona so o primeiro ol, seleciona todos os ol que sao filhos imediatos do body*/
+            display: flex;
+        }
+        li{
+            list-style-type: none;
+            margin-right: 2rem;
+            position: relative;
+            cursor: pointer;
+        }
+        ol ol{
+            background-color: aquamarine;
+            padding: 2rem;
+            visibility: hidden;
+        }
+        li:hover ol{
+            /* torna a tag visivel ao colocar o mouse em cima */
+            visibility: visible;
+        }
+    </style>
+    <title>SUBMENUS</title>
+</head>
+<body>
+    <ol>
+        <li>Pagina Inicial</li>
+        <li>Programação
+            <ol>
+                <li>Palestras</li>
+                <li>Minicursos</li>
+            </ol>
+        </li>
+        <li>Organização</li>
+        <li>Exposição
+            <ol>
+                <li>Tecnologia</li>
+                <li>Empreendorismo</li>
+                <li>Projetos</li>
+            </ol>
+        </li>
+        <li>Contato</li>
+    </ol>
+</body>
+</html>
