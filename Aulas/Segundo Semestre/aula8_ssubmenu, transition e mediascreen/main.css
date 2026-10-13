@@ -1,0 +1,68 @@
+*{
+    margin:  0px;
+    padding: 0px;
+}
+
+nav > ol{ /* > : somente o ol que e um filho direto do nav*/
+    display: flex;
+}
+ol > li{
+    position: relative;
+    background-color: cadetblue;
+    list-style-type: none;
+    padding: 2rem;
+}
+ol ul{
+    transition: opacity 2s, background-color 2s, height 2s, easy-in-out 2s;
+
+    visibility: hidden; /* torna a tag totalmente invisivel*/
+    opacity : 0;
+    
+    position: absolute; /* o submenu fica sobre os elementso */
+    
+    background-color: black;
+    padding: 2rem;
+
+    list-style-type: none;
+
+    height: 0rem;
+
+    z-index: 2;
+    /*
+    z-index : determina o eixo z da tag na pagina, ou seja, as camadas da pagina
+    tambem pode ser entendido como  a sobreposicao de uma tag sobre outras
+    */
+    /* 
+    tambem pode-se usar:
+    - visibility : hidden (e visibility : visible)
+    - display : none
+    - opacity : (de 0 ate 1)
+    */
+}
+ul a{color: aliceblue;}
+ol li:hover ul{
+    /* efeito de aparecer quando o mouse e colocado em cima, com o css
+    tambem conhecido como mouse over com css */
+    /* opacity: 1;
+    esse faz com que a area inteira do li aplique o efeito de aparecimento, ou seja, mesmo a area que nao aparece vai ativar esse efeito
+
+    */
+    opacity: 1;
+    height:  5rem;
+    background-color: darkblue;
+    visibility: visible;
+    
+    /* transition : faz uma transicao leve quando uma mudanca e detectada */
+}
+/* RESPONSIVIDADE DO SITE */
+@media screen and (max-width: 1200px) /*basicamente um if, so que no css - se a resolucao maxima do dispositivo for MENOR QUE 1200*/{
+    body{
+        background-color: rgb(36, 157, 32);
+    }
+    /* aqui, e possivel mudar todo o css, dependendo de uma condicao */
+}
+@media screen and (max-width : 850px){
+    body{
+        background-color: rgb(212, 14, 14);
+    }
+}
