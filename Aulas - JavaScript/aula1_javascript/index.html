@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+
+    <h1>JAVASCRIPT</h1>
+    <ul>
+        <li>JAVASCRIPT é uma linguagem de programação FRONT-END e pode fazer rquisições BACK-END</li>
+        <li>Diferencia maiúsculas das minúsculas</li>
+        <li>O ";" é opcional</li>
+        <li>Usado para dar comportamento e INTERATIVIDADE</li>
+        <li>Exemplo de uso : modal, janela de mensagem, correção e form, galeria de fotos ...</li>
+    </ul>
+    <p id="olamundo"> </p>
+    <script>
+        // alert("HELLO WORLD");
+
+        // let minora = window.confirm("Hoje tem aula de Minora");
+        // document.write("<p>"+ minora +"</p>"); // o document.write escreve diretamente no html
+        
+        // let nome   = window.prompt("Qual seu nome?");
+        // document.write("<p>"+ nome +"</p>");
+
+        // 3 janelas (chatas, nao use!)
+        // alert   : e apenas para mensagens
+        // confirm : retorna true e false
+        // prompt  : retorna um texto
+        // - todos os tres criam janelas
+        
+        document.write("HELLO WORLD com document.write()");
+        console.log("hello world");
+        document.getElementById("olamundo").innerHTML = "OLA MUNDO COM getElementById().innerHTML"
+
+
+        // document.getElementById() : pega um id e substitui o texto dentro dele pelo texto que foi que foi atribuido
+        // console.log               : coloca um texto no console
+        // - getElementById e o mais indicado por ser menos invasivo do que o document.write
+        
+        document.write("VARIÁVEIS");
+        let num        = 5;
+        let numdecimal = 54.87;
+        let curso      = "INFOWEB";
+        let booleano   = true;
+        
+        document.write("<h2>OPERADORES ARITMÉTICOS</h2>");
+        console.log(54 + 87);
+        console.log(54 - 87);
+        console.log(54 * 87);
+        console.log(54 / 87);
+        let a = 1999;
+        console.log(++a);
+        console.log(a);
+    </script>
+    <label>NUM 1 : <input type="text" id="num1"></label>
+    <label>NUM 2 : <input type="text" id="num2"></label>
+    <button id="somar">SOMAR</button>
+    <p id="result"></p>
+    <script>
+        const somar = document.querySelector("#somar");
+        // com o querySelector(), e necessario colocar o # para ids, e . para class
+        somar.addEventListener("click", function (e) { // evento de click que chama a funcao declarada nesses parenteses
+            let num1 = document.querySelector("#num1").value;
+            let num2 = document.querySelector("#num2").value;
+            document.getElementById("result").innerHTML = parseInt(num1) + parseInt(num2);
+            
+        })
+    </script>
+</body>
+</html>
