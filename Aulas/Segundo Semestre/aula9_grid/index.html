@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY GRID</title>
+    <style>
+        body > div{
+            border:     1px solid black;
+            max-width:  70rem;
+            max-height: 70rem;
+
+            margin:  0 auto;
+            padding: 2rem;
+
+            gap: 2rem;
+
+            display: grid;
+            grid-template-areas: 
+            /* o display : grid permite a diagramacao com cards mesclados horizontalmente e verticalmente */
+            "a b c"
+            "a b d"
+            "e e e"
+            ;
+            grid-template-columns: 1fr 2fr 1fr; 
+            grid-template-rows:    1fr 1fr 1fr;
+            /* 
+            grid-template-columns : define a largura de cada coluna
+            para cada coluna definida, e necessario colocar o valor dessa linha
+            unidade : rem, %, em, fr
+            fr      : representa uma fracao do tamanho do container
+
+            grid-template-rows    : define a altura de cada linha
+            para cada linha definida, e necessario colocar o valor para essa linha
+            cuidado ! se o tamanho da caixa for pequena demais, o texto vai ter um overflow para fora da caixa
+            */
+            /* "." - representa um espaco vazio */
+            /* as areas nao podem ficar distantes, nem com curvas (como um formato de "L"), ou noa aparecer (todos os nomes precisam estar na matriz */
+        }
+        div > div{
+            border:  1px solid gray;
+            padding: 2rem;
+        }
+        /* 
+        essa e a declaracao do nome das areas dessas divs no display : grid
+        assim como a declaracao de variaveis. nao pode colocar na declaracao do nome um numero como primeiro char
+        - e recomendado para a declaracao desses nomes o uso de uma unica letra, para a tabelacao com o grid-template-area ser perfeitamente alinhada
+        */
+        #palestras{    grid-area: a;}
+        #palestrantes{ grid-area: b;}
+        #minicursos{   grid-area: c;}
+        #exposicoes{   grid-area: d;}
+        #contato{      grid-area: e;}
+    </style>
+</head>
+<body>
+    <div>
+        <div id="palestras">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eos dicta doloremque dolore quaerat expedita aliquam, ut error placeat iure quam nemo amet commodi itaque corporis maxime exercitationem quia nostrum.</p>
+        </div>
+        <div id="palestrantes">
+            <p>Tempore accusantium, et laborum deleniti molestias facere, doloribus velit numquam, eligendi enim nobis quia corrupti repellat. Nam, in corporis enim facilis id rem laudantium omnis illum neque, odit aperiam iste.</p>
+        </div>
+        <div id="minicursos">
+            <p>Harum culpa neque repellendus soluta fugiat error nihil a cum sequi placeat ut, minus sapiente dolore facilis accusamus maxime voluptas esse delectus est, quam assumenda nobis quaerat repellat! Labore, minima?</p>
+        </div>
+        <div id="exposicoes">
+            <p>Dignissimos saepe error animi sunt dolore fugiat, at illum explicabo, laborum ut numquam optio recusandae culpa sint. Dolores rerum, accusamus ipsum molestiae cumque alias facere sequi est laudantium repellat voluptate!</p>
+        </div>
+        <div id="contato">
+            <p>Dignissimos saepe error animi sunt dolore fugiat, at illum explicabo, laborum ut numquam optio recusandae culpa sint. Dolores rerum, accusamus ipsum molestiae cumque alias facere sequi est laudantium repellat voluptate!</p>
+        </div>
+    </div>
+</body>
+</html>
