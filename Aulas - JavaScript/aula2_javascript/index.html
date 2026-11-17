@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY E MATH</title>
+</head>
+<body>
+    <h1>Array e Math</h1>
+    <h2>Array</h2>
+    <script>
+        //
+        let alunos = [
+            "ravi", "victor",
+            "japao", "mateus"
+        ];
+        console.log( alunos[0] );
+        console.log(`Como imprimir um item da lista : ${ alunos[1] }`);
+        console.log("Como imprimir um item da lista :" + alunos[1]);
+        console.log(`Lista como string ${alunos.toString()}`);
+        console.log(`Lista como string ${alunos.length}`);
+
+        console.log("O ultimo elemento :" + alunos[-1]);          // ultimo elemento acessado por numero negativo
+        console.log("Os elementos, ordenados :" + alunos.sort()); // ordenacao
+        console.log("Adiciona um item :" + alunos.push("bab"));   // adiciona um elemento e retorna o comprimento
+        console.log("Lista como string" + alunos.toString);
+
+        alunos.pop() // remove o ultimo indice
+        console.log("Lista :" + alunos.join(" | "));
+        alunos.splice(0 & 2, 1);
+        // o splice() remove uma quantidade de itens de uma lista a partir de 
+        // syntax do splice():
+        // primeiro parametro - em que indice sera iniciada a exclusao
+        // segundo  parametro - quantos indices serao excluidos
+        console.log("Lista :" + alunos.join(" | "));
+    </script>
+    <h2>Math</h2>
+    <script>
+        console.log(Math.round(5.6));
+        // Math.round() : arredonda para o inteiro mais proximo
+        // Math.ceil()  : arredonda para o maior inteito mais proximo
+        // Math.floor() : arredonda para o menor inteito mais proximo
+
+        console.log(Math.max(7, 8, 9, 4)); // retorna o maior valor passado como paramentro
+        console.log(Math.min(7, 8, 9, 4)); // retorna o menor valor passado como paramentro
+
+        console.log(Math.random());                  // retorna um numero aleatorio entre 0 e 1
+        console.log(Math.random() * 10);             // retorna um numero aleatorio entre 0 e 10
+        console.log(Math.floor(Math.random() * 10)); // retorna um *inteiro* aleatorio entre 0 e 1
+    </script>
+
+    <label>Nome : <input type="text" id="nome"></label>
+    <button id="gerar">GERAR</button>
+    <p id="result"></p>
+
+    <script>
+        const gerar  = document.querySelector("#gerar");
+        const result = document.getElementById("result");
+        gerar.addEventListener("click", function (e){
+            const nomed = document.getElementById("nome");
+            let   cores = ["blue", "pink", "yellow", "red"];
+            result.style.color = cores[Math.floor(Math.random() * 4)];
+            // cores[Math.floor(Math.random() * 4)]
+            // - retorna uma cor aleatoria entre as cores de "cores"
+            result.style.fontSize = Math.round(Math.random() * 10) + "rem";
+            result.innerHTML      = nomed.value;
+        })
+
+    </script>
+</body>
+</html>
