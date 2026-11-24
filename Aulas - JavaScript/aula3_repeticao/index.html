@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPETICAO</title>
+</head>
+<body>
+    <script>
+        // incremento : i++/ ++i/ i += 1/ i = i + 1;
+        // i++ incrementa antes, ++i incrementa depois;
+        for (let i = 0; i < 10; i++) {
+            console.log("FOR com incremento: " + i);
+        }
+        for (let j = 10; j > 0; j--){
+            console.log("FOR com decremento :" + j);
+        }
+        const frutas = ["banana", "morango",, "goiaba"];
+        frutas.forEach(f => { // variavel 'f' representa um item da lista
+            console.log("FOR" + frutas);
+        })
+        let k = 0;
+        while (k < 10) {
+            console.log("WHILE : " + k);
+            k++;
+            k++;
+        }
+
+    </script>
+    <div style="font-size: 2rem;" id="result"></div>
+    <script>
+        let result = document.getElementById("result");
+        for(let i = 0; i < 10; i++){
+            result.innerHTML += "<p style=font-size:"+ i +"rem >INFOWEB</p>";
+            // "+=" vai pegar o valor anterior adicionar outro, mesmo que esse seja uma string
+        }
+    </script>
+</body>
+</html>
